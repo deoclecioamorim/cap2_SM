@@ -12,7 +12,7 @@ rm(list=ls(all=T))#Limpando a memória
 ##---Carrengando os pacotes
 library(combTMB)
 library(tidyverse)
-##---Comando para deixar todos os títulos dos gráficos ggplot centralizados
+##---Comando para deixar todos os títulos dos gráficos ggplot2 centralizados
 personal_title = theme(plot.title =
                          element_text(face="bold",hjust = 0.5))
 
