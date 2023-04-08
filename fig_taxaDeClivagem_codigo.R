@@ -76,8 +76,6 @@ with(embryos,tapply(D3/IVC,Status,mean))
 
 (mp_status_bb <-mutate(mp_status_bb, mediaobs=c(0.7964167,0.7648248,0.7015636)))
 
-
-
 ##--Modelo combinado (M10)
 ##--Removendo os objetos
 remove(data_pred, newdat)
@@ -122,7 +120,6 @@ with(embryos,tapply(D3/IVC,Period,mean))
 (mp_period_cm<-mutate(mp_period_cm, mediaobs=c(0.7482085,0.7763982)))
 
 
-
 ##--Status
 (mp_status_cm<-data.frame(Status,
                           prob=status.means,  
@@ -153,7 +150,7 @@ mpfstatus <- data.frame(Modelos=Modelos_2,mpfstatus)
 mpfstatus
 
 
-##--Figura com ggplot2
+##--Figura (ggplot2)
 
 fig_period_prop <- ggplot(mpfperiod,aes(x=Period, y=prob,color=Modelos))+
   geom_point(aes(x=Period, y=mediaobs,color=Modelos), shape = 8, size  = 1, 
