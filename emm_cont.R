@@ -13,7 +13,7 @@ rm(list=ls(all=T))#Limpando a memória
 library(combTMB)
 library(tidyverse)
 library(emmeans)
-##---Comando para deixar todos os títulos dos gráficos ggplot centralizados
+##---Comando para deixar todos os títulos dos gráficos ggplot2 centralizados
 personal_title = theme(plot.title =
                          element_text(face="bold",hjust = 0.5))
 
@@ -27,7 +27,7 @@ mm_M4MCM <- emmeans(M4MCM, ~ Status * Period, type="response")
 mm_M4MCM <- data.frame(mm_M4MCM)
 mm_M4MCM
 
-##---Médias marginais para o modelo poisson_simples
+##---Médias marginais para o modelo Poisson_simples
 mm_ps <- emmeans(M1, ~ Status * Period, type="response")
 mm_ps <- data.frame(mm_ps)
 names(mm_ps)[3]<-"response"
